@@ -10,7 +10,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 // To use cors
-app.use(cors());
+// app.use(cors());
 
 // To use json bodies
 app.use(express.json());
