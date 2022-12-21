@@ -10,7 +10,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 // To use cors
-app.use(cors({origin: ["http://localhost:3000/", "https://ecommerce-assignment-frontend.vercel.app/"];));
+app.use(cors({origin: ["http://localhost:3000/", "https://ecommerce-assignment-frontend.vercel.app/"]}));
 
 // To use json bodies
 app.use(express.json());
