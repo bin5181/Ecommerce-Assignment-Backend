@@ -1,0 +1,180 @@
+{
+  "client": "Thunder Client",
+  "collectionName": "Ecommerce Site",
+  "dateExported": "2022-12-21T16:54:31.286Z",
+  "version": "1.1",
+  "folders": [
+    {
+      "_id": "f169a0ce-01ab-48b3-a867-4fa0c2b0cfd2",
+      "name": "Auth",
+      "containerId": "",
+      "created": "2022-12-21T16:52:42.996Z",
+      "sortNum": 10000
+    },
+    {
+      "_id": "11ac0fcd-3092-482b-a356-f0333f0d84de",
+      "name": "Items",
+      "containerId": "",
+      "created": "2022-12-21T16:52:42.997Z",
+      "sortNum": 20000
+    },
+    {
+      "_id": "7952e235-3659-4079-97c3-b11c07c28ed6",
+      "name": "Cart",
+      "containerId": "",
+      "created": "2022-12-21T16:52:42.998Z",
+      "sortNum": 30000
+    },
+    {
+      "_id": "484cbc2e-f0d0-4d20-a90b-7ee420bda0c3",
+      "name": "Order",
+      "containerId": "",
+      "created": "2022-12-21T16:52:42.999Z",
+      "sortNum": 40000
+    }
+  ],
+  "requests": [
+    {
+      "_id": "f6690873-ece6-493b-9768-ce33bce70de0",
+      "colId": "6529df5e-4c08-4017-bbb1-979390e05943",
+      "containerId": "f169a0ce-01ab-48b3-a867-4fa0c2b0cfd2",
+      "name": "Login User",
+      "url": "http://localhost:5000/auth/login",
+      "method": "POST",
+      "sortNum": 10000,
+      "created": "2022-12-21T16:52:42.996Z",
+      "modified": "2022-12-21T16:53:11.654Z",
+      "headers": [{ "name": "Content-Type", "value": "application/json" }],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"email\": \"\",\n  \"password\": \"\"\n}",
+        "form": []
+      },
+      "tests": []
+    },
+    {
+      "_id": "e8ce573f-65c6-46c7-92d9-f82fd69a8820",
+      "colId": "6529df5e-4c08-4017-bbb1-979390e05943",
+      "containerId": "f169a0ce-01ab-48b3-a867-4fa0c2b0cfd2",
+      "name": "Create User",
+      "url": "http://localhost:5000/auth/create",
+      "method": "POST",
+      "sortNum": 20000,
+      "created": "2022-12-21T16:52:42.997Z",
+      "modified": "2022-12-21T16:53:26.659Z",
+      "headers": [{ "name": "Content-Type", "value": "application/json" }],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"name\": \"\",\n  \"email\": \"\",\n  \"password\": \"\"\n}",
+        "form": []
+      },
+      "tests": []
+    },
+    {
+      "_id": "cbf68141-44a8-4041-ac6c-c55cb082c487",
+      "colId": "6529df5e-4c08-4017-bbb1-979390e05943",
+      "containerId": "f169a0ce-01ab-48b3-a867-4fa0c2b0cfd2",
+      "name": "Fetch User",
+      "url": "http://localhost:5000/auth/fetch",
+      "method": "POST",
+      "sortNum": 30000,
+      "created": "2022-12-21T16:52:42.998Z",
+      "modified": "2022-12-21T16:53:31.505Z",
+      "headers": [{ "name": "auth-token", "value": "" }],
+      "params": [],
+      "tests": []
+    },
+    {
+      "_id": "41209282-673b-4bfa-ac76-0736ea19c786",
+      "colId": "6529df5e-4c08-4017-bbb1-979390e05943",
+      "containerId": "11ac0fcd-3092-482b-a356-f0333f0d84de",
+      "name": "Create Item",
+      "url": "http://localhost:5000/items",
+      "method": "POST",
+      "sortNum": 40000,
+      "created": "2022-12-21T16:52:42.999Z",
+      "modified": "2022-12-21T16:53:50.896Z",
+      "headers": [{ "name": "Content-Type", "value": "application/json" }],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"title\": \"\",\n  \"description\": \"\",\n  \"img\": \"\",\n  \"price\": 0\n}",
+        "form": []
+      },
+      "tests": []
+    },
+    {
+      "_id": "2c5ba2ce-cef9-45c7-a607-edf5aedf7e1b",
+      "colId": "6529df5e-4c08-4017-bbb1-979390e05943",
+      "containerId": "484cbc2e-f0d0-4d20-a90b-7ee420bda0c3",
+      "name": "Fetch Orders",
+      "url": "http://localhost:5000/order",
+      "method": "GET",
+      "sortNum": 40000,
+      "created": "2022-12-21T16:52:43.000Z",
+      "modified": "2022-12-21T16:54:18.382Z",
+      "headers": [{ "name": "auth-token", "value": "" }],
+      "params": [],
+      "tests": []
+    },
+    {
+      "_id": "de4ad788-56f8-47b7-bf29-613cae72b2e9",
+      "colId": "6529df5e-4c08-4017-bbb1-979390e05943",
+      "containerId": "11ac0fcd-3092-482b-a356-f0333f0d84de",
+      "name": "Get Items",
+      "url": "http://localhost:5000/items",
+      "method": "GET",
+      "sortNum": 50000,
+      "created": "2022-12-21T16:52:43.001Z",
+      "modified": "2022-12-21T16:52:43.001Z",
+      "headers": [],
+      "params": [],
+      "tests": []
+    },
+    {
+      "_id": "4ff7cf65-50e9-409c-81cf-5dc4d790eebf",
+      "colId": "6529df5e-4c08-4017-bbb1-979390e05943",
+      "containerId": "7952e235-3659-4079-97c3-b11c07c28ed6",
+      "name": "Fecth Items",
+      "url": "http://localhost:5000/cart",
+      "method": "GET",
+      "sortNum": 60000,
+      "created": "2022-12-21T16:52:43.002Z",
+      "modified": "2022-12-21T16:54:02.147Z",
+      "headers": [{ "name": "auth-token", "value": "" }],
+      "params": [],
+      "tests": []
+    },
+    {
+      "_id": "29b9ad31-fed8-412f-9741-0a81179b01dc",
+      "colId": "6529df5e-4c08-4017-bbb1-979390e05943",
+      "containerId": "7952e235-3659-4079-97c3-b11c07c28ed6",
+      "name": "Add Item",
+      "url": "http://localhost:5000/cart",
+      "method": "POST",
+      "sortNum": 70000,
+      "created": "2022-12-21T16:52:43.003Z",
+      "modified": "2022-12-21T16:54:13.138Z",
+      "headers": [{ "name": "auth-token", "value": "" }],
+      "params": [],
+      "body": { "type": "json", "raw": "{\n  \"itemId\": \"\"\n}", "form": [] },
+      "tests": []
+    },
+    {
+      "_id": "c7730c29-e732-4dce-bacf-a1ea0473ab6e",
+      "colId": "6529df5e-4c08-4017-bbb1-979390e05943",
+      "containerId": "484cbc2e-f0d0-4d20-a90b-7ee420bda0c3",
+      "name": "Checkout",
+      "url": "http://localhost:5000/order",
+      "method": "POST",
+      "sortNum": 80000,
+      "created": "2022-12-21T16:52:43.004Z",
+      "modified": "2022-12-21T16:54:24.706Z",
+      "headers": [{ "name": "auth-token", "value": "" }],
+      "params": [],
+      "tests": []
+    }
+  ]
+}
