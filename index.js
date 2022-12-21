@@ -7,24 +7,17 @@ require("dotenv").config();
 connectToMongo();
 
 const app = express();
-const port = 5000;
-
-var whitelist = ["http://localhost:3000/", "https://ecommerce-assignment-frontend.vercel.app/"];
-var corsOptions = {
-    origin: function (origin, callback) {
-        if (whitelist.indexOf(origin) !== -1) {
-            callback(null, true);
-        } else {
-            callback(new Error("Something went wrong"));
-        }
-    },
-};
+const port = process.env.PORT || 5000;
 
 // To use cors
-app.use(cors(corsOptions));
+// app.use(cors());
 
 // To use json bodies
 app.use(express.json());
+
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*")
+})
 
 // Available Routes
 app.use("/auth", require("./Routes/auth"));
